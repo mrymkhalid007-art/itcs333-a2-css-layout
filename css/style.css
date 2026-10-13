@@ -1,7 +1,141 @@
-/* ITCS333 A2 starter — implement the design spec from index.html here.
-   See README rubric for the graded checks. Do not use inline styles. */
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
 
-/* TODO: style #site-header (padding, border-bottom) */
-/* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
-/* TODO: style form inputs (padding) and a :focus state */
-/* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== Header (id selector) ===== */
+#site-header {
+  padding: 20px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-bottom: 4px solid #475569;
+}
+
+#site-header h1 {
+  margin: 0 0 12px;
+}
+
+/* ===== Nav (descendant selector + pseudo-class) ===== */
+.main-nav a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 6px 14px;
+  color: #f8fafc;
+  text-decoration: none;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+}
+
+.main-nav a:hover {
+  background: #334155;
+}
+
+/* ===== Sections ===== */
+.content-section {
+  margin: 20px 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+/* ===== Table ===== */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: #e2e8f0;
+}
+
+/* ===== Card grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  margin: 0;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.weight {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* ===== Form ===== */
+.register-form label {
+  display: block;
+  margin: 12px 0 4px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+}
+
+.register-form input:focus {
+  outline: 2px solid #1e293b;
+  border-color: #1e293b;
+}
+
+.btn-primary {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #334155;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #cbd5e1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
